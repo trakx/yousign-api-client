@@ -54,7 +54,10 @@ namespace Trakx.YouSign.ApiClient.Utils
 
         protected virtual void Dispose(bool disposing)
         {
-            if (!disposing) return;
+            if (!disposing)
+            {
+                return;
+            }
             _tokenSource.Cancel();
             _tokenSource.Dispose();
         }

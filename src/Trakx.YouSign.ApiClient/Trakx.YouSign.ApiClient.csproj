@@ -5,6 +5,7 @@
     <GenerateApiClient>False</GenerateApiClient>
     <AssemblyName>Trakx.YouSign.ApiClient</AssemblyName>
     <RootNamespace>Trakx.YouSign.ApiClient</RootNamespace>
+    <RepositoryUrl>https://github.com/trakx/yousign-api-client</RepositoryUrl>
   </PropertyGroup>
 
   <Import Project="../Common.Projects.props" />

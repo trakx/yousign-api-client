@@ -48,7 +48,6 @@ jobs:
           COMP_MODE=Debug
         fi
         echo '::set-output name=compilationMode::'$COMP_MODE
-        echo '::GITHUB_TOKEN::'${{secrets.GITHUB_TOKEN}}
         echo "compilation mode set to ${{steps.comp-mode.outputs.compilationMode}}"
 
     - name: checkout

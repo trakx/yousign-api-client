@@ -14,7 +14,7 @@ namespace Trakx.YouSign.ApiClient
 {
     public static partial class AddYouSignApiClientExtension
     {
-        public static IServiceCollection AddTrakxExchangeApiClient(
+        public static IServiceCollection AddTrakxYouSignApiClient(
             this IServiceCollection services, IConfiguration configuration)
         {
             services.AddOptions();
@@ -27,7 +27,7 @@ namespace Trakx.YouSign.ApiClient
             return services;
         }
 
-        public static IServiceCollection AddTrakxExchangeApiClient(
+        public static IServiceCollection AddTrakxYouSignApiClient(
             this IServiceCollection services, YouSignApiConfiguration configuration)
         {
             var options = Options.Create(configuration);

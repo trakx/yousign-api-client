@@ -35,7 +35,7 @@ namespace Trakx.YouSign.ApiClient.Tests.Integration
             Logger = new LoggerConfiguration().WriteTo.TestOutput(output).CreateLogger()
                 .ForContext(MethodBase.GetCurrentMethod()!.DeclaringType);
             IServiceCollection services = new ServiceCollection();
-            services.AddTrakxExchangeApiClient(config);
+            services.AddTrakxYouSignApiClient(config);
             ServiceProvider = services.BuildServiceProvider();
             FilesClient = ServiceProvider.GetRequiredService<IFilesClient>();
             ProceduresClient = ServiceProvider.GetRequiredService<IProceduresClient>();

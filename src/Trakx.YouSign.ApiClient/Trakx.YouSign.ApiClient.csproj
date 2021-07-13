@@ -5,13 +5,14 @@
     <GenerateApiClient>False</GenerateApiClient>
     <AssemblyName>Trakx.YouSign.ApiClient</AssemblyName>
     <RootNamespace>Trakx.YouSign.ApiClient</RootNamespace>
-    <RepositoryUrl>https://github.com/trakx/yousign-api-client</RepositoryUrl>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.1.2</Version>
   </PropertyGroup>
 
   <Import Project="../Common.Projects.props" />
   <Import Project="../Packable.Projects.props" />
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE" Link="LICENSE" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Ardalis.GuardClauses" Version="3.2.0" />

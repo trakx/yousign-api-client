@@ -9,6 +9,9 @@ namespace Trakx.YouSign.ApiClient
         [Required]
         public string BaseUrl { get; init; }
 
+        [Required]
+        public string WebAppUrl { get; init; }
+
         public int? InitialRetryDelayInMilliseconds { get; init; }
 
         public int? MaxRetryCount { get; init; }

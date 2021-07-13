@@ -6,6 +6,8 @@
     <AssemblyName>Trakx.YouSign.ApiClient</AssemblyName>
     <RootNamespace>Trakx.YouSign.ApiClient</RootNamespace>
     <RepositoryUrl>https://github.com/trakx/yousign-api-client</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.1.1</Version>
   </PropertyGroup>
 
   <Import Project="../Common.Projects.props" />

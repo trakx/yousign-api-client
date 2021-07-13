@@ -1,34 +1,23 @@
 ﻿using System;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Options;
 using Serilog;
 using Trakx.Utils.Apis;
-using Trakx.Utils.DateTimeHelpers;
 
-namespace Trakx.YouSign.ApiClient.Utils
+namespace Trakx.YouSign.ApiClient
 {
-    public interface ICopperCredentialsProvider : ICredentialsProvider { };
-    public class ApiKeyCredentialsProvider : ICopperCredentialsProvider, IDisposable
+    public class YouSignCredentialsProvider : ICredentialsProvider, IDisposable
     {
-        internal const string ApiKeyHeader = "ApiKey";
-        internal const string ApiSignatureHeader = "X-Signature";
-        internal const string ApiTimestampHeader = "X-Timestamp";
 
         private readonly YouSignApiConfiguration _configuration;
-        private readonly IDateTimeProvider _dateTimeProvider;
         private readonly CancellationTokenSource _tokenSource;
 
-        private static readonly ILogger Logger = Log.Logger.ForContext<ApiKeyCredentialsProvider>();
+        private static readonly ILogger Logger = Log.Logger.ForContext<YouSignCredentialsProvider>();
 
-        public ApiKeyCredentialsProvider(IOptions<YouSignApiConfiguration> configuration,
-            IDateTimeProvider dateTimeProvider)
+        public YouSignCredentialsProvider(YouSignApiConfiguration configuration)
         {
-            _configuration = configuration.Value;
-            _dateTimeProvider = dateTimeProvider;
-
+            _configuration = configuration;
             _tokenSource = new CancellationTokenSource();
         }
 

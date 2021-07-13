@@ -1,31 +1,28 @@
 ﻿using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
-using Trakx.Utils.Apis;
 
 namespace Trakx.YouSign.ApiClient
 {
     internal abstract class AuthorisedClient
     {
 #nullable disable
-        public YouSignApiConfiguration Configuration { get; protected set; }
-        public ICredentialsProvider CredentialsProvider { get; protected set; }
+        public ClientConfigurator Configurator { get; protected set; }
 #nullable restore
 
         private string? _baseUrl;
-        protected string BaseUrl => _baseUrl ??= Configuration!.BaseUrl;
+        protected string BaseUrl => _baseUrl ??= Configurator.Configuration!.BaseUrl;
 
-        protected AuthorisedClient(ClientConfigurator clientConfigurator)
+        protected AuthorisedClient(ClientConfigurator configurator)
         {
-            Configuration = clientConfigurator.Configuration;
-            CredentialsProvider = clientConfigurator.GetCredentialsProvider(this.GetType());
+            Configurator = configurator;
         }
 
-        protected Task<HttpRequestMessage> CreateHttpRequestMessageAsync(CancellationToken cancellationToken)
+        protected async Task<HttpRequestMessage> CreateHttpRequestMessageAsync(CancellationToken cancellationToken)
         {
             var msg = new HttpRequestMessage();
-            CredentialsProvider.AddCredentials(msg);
-            return Task.FromResult(msg);
+            await Configurator.CredentialsProvider.AddCredentialsAsync(msg);
+            return msg;
         }
     }
 }

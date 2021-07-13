@@ -7,7 +7,7 @@ using Xunit.Abstractions;
 namespace Trakx.YouSign.ApiClient.Tests.Integration
 {
 
-    public class YouSignBaseTestBase
+    public class YouSignTestBase
     {
 
         protected ServiceProvider ServiceProvider { get; init; }
@@ -24,7 +24,7 @@ namespace Trakx.YouSign.ApiClient.Tests.Integration
 
         protected MockCreator MockCreator { get; init; }
 
-        public YouSignBaseTestBase(ITestOutputHelper output)
+        public YouSignTestBase(ITestOutputHelper output)
         {
             var secrets = new Secrets();
             var config = new YouSignApiConfiguration

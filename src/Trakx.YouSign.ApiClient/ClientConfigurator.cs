@@ -1,26 +1,20 @@
-﻿using System;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
-using Trakx.YouSign.ApiClient.Utils;
-using Trakx.Utils.Apis;
+﻿using Trakx.Utils.Apis;
 
 namespace Trakx.YouSign.ApiClient
 {
-    internal class ClientConfigurator
+    public class ClientConfigurator
     {
-        private readonly IServiceProvider _provider;
 
-        public ClientConfigurator(IServiceProvider provider)
+        public YouSignApiConfiguration Configuration { get; init; }
+
+        public ICredentialsProvider CredentialsProvider { get; init; }
+
+        public ClientConfigurator(YouSignApiConfiguration configuration, 
+            ICredentialsProvider credentialsProvider)
         {
-            _provider = provider;
-            Configuration = provider.GetService<IOptions<YouSignApiConfiguration>>()!.Value;
+            Configuration = configuration;
+            CredentialsProvider = credentialsProvider;
         }
 
-        public YouSignApiConfiguration Configuration { get; }
-
-        public ICredentialsProvider GetCredentialsProvider(System.Type clientType)
-        {
-            return _provider.GetRequiredService<ICredentialsProvider>();
-        }
     }
 }

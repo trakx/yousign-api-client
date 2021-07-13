@@ -8,7 +8,7 @@ using Xunit.Abstractions;
 
 namespace Trakx.YouSign.ApiClient.Tests.Integration
 {
-    public sealed class ProceduresClientTests : YouSignBaseTestBase
+    public sealed class ProceduresClientTests : YouSignTestBase
     {
 
         public ProceduresClientTests(ITestOutputHelper output) 

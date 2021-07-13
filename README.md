@@ -37,7 +37,7 @@ YouSignApiConfiguration__ApiKey=********
 3) The reponse of the second method will contain a member id;
 4) Add the iframe below at your website and pass the member id as follows:
 
-```
+```html
 <iframe src="https://staging-app.yousign.com/procedure/sign?members=/members/676e24cc-a396-4854-b798-371768f433fa"></iframe>
 ```
 

@@ -331,6 +331,7 @@ definitions:
         example: custom
         enum:
           - none
+          - advanced
           - custom
       operationCustomModes:
         type: array
@@ -693,6 +694,7 @@ definitions:
         type: string
         enum:
           - none
+          - advanced
           - custom
       operationCustomModes:
         type: array

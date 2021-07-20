@@ -44,6 +44,7 @@ namespace Trakx.YouSign.ApiClient.Tests.Integration
                         Lastname = lastName,
                         Email = email,
                         Phone = "+5551999999998",
+                        OperationLevel = MemberInputOperationLevel.Advanced,
                         FileObjects = new List<FileObjectInput>
                         {
                             new ()

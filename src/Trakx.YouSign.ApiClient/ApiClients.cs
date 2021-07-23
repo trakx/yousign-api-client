@@ -1929,8 +1929,11 @@ namespace Trakx.YouSign.ApiClient
         [System.Runtime.Serialization.EnumMember(Value = @"none")]
         None = 0,
     
+        [System.Runtime.Serialization.EnumMember(Value = @"advanced")]
+        Advanced = 1,
+    
         [System.Runtime.Serialization.EnumMember(Value = @"custom")]
-        Custom = 1,
+        Custom = 2,
     
     }
     
@@ -2020,8 +2023,11 @@ namespace Trakx.YouSign.ApiClient
         [System.Runtime.Serialization.EnumMember(Value = @"none")]
         None = 0,
     
+        [System.Runtime.Serialization.EnumMember(Value = @"advanced")]
+        Advanced = 1,
+    
         [System.Runtime.Serialization.EnumMember(Value = @"custom")]
-        Custom = 1,
+        Custom = 2,
     
     }
     

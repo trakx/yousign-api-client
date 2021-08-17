@@ -29,6 +29,12 @@ YouSignApiConfiguration__ApiKey=********
 5) Click on "Admin" Menu and select "API Keys";
 6) Click on "Create An Api Key";
 7) You need to use this key in your .env file - variable "YouSignApiConfiguration__ApiKey".
+8) Click on "Admin" Menu and select "Signature UI";
+9) Click on "Add a Signature UI";
+10) In Content group, disable all checks; 
+11) In Redirects group, enable all checks and set the following redirect url "https://trakx.opendax.app/kyc-completed";
+12) Click on "Save" button, and access the details of this signature ui;
+13) Click on "Copy the ID". You need to use the guid, after "/signature_uis/", in your .env file - variable "YouSignApiConfiguration__SignatureUi".
 
 ## How to sign a document?
 
@@ -38,7 +44,7 @@ YouSignApiConfiguration__ApiKey=********
 4) Add the iframe below at your website and pass the member id as follows:
 
 ```html
-<iframe src="https://staging-app.yousign.com/procedure/sign?members=/members/676e24cc-a396-4854-b798-371768f433fa"></iframe>
+<iframe src="https://staging-app.yousign.com/procedure/sign?members=/members/676e24cc-a396-4854-b798-371768f433fa&signatureUi=/signature_uis/3327c735-05f2-41d5-9839-e3c7b6752a31"></iframe>
 ```
 
-**Note:** To see one example of this follow, access the unit test "ProceduresClientTests.ProceduresClientTest_should_create_a_new_memberid_to_be_signed(..)"
+**Note:** To see one example of this. Run the unit test "ProceduresClientTests.ProceduresClientTest_should_create_a_new_memberid_to_be_signed(..)"

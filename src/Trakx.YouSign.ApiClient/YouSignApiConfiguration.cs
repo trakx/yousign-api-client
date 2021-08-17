@@ -21,6 +21,9 @@ namespace Trakx.YouSign.ApiClient
         [SecretEnvironmentVariable]
         public string ApiKey { get; init; }
 
+        [SecretEnvironmentVariable]
+        public string SignatureUi { get; init; }
+
 #nullable restore
     }
 }

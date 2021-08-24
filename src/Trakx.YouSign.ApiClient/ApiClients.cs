@@ -1949,6 +1949,9 @@ namespace Trakx.YouSign.ApiClient
         [System.Runtime.Serialization.EnumMember(Value = @"email")]
         Email = 2,
     
+        [System.Runtime.Serialization.EnumMember(Value = @"checkIdCard")]
+        CheckIdCard = 3,
+    
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "10.4.4.0 (Newtonsoft.Json v12.0.0.0)")]
@@ -2042,6 +2045,9 @@ namespace Trakx.YouSign.ApiClient
     
         [System.Runtime.Serialization.EnumMember(Value = @"email")]
         Email = 2,
+    
+        [System.Runtime.Serialization.EnumMember(Value = @"checkIdCard")]
+        CheckIdCard = 3,
     
     }
     

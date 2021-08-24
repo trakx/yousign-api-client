@@ -341,6 +341,7 @@ definitions:
             - sms
             - inwebo
             - email
+            - checkIdCard
       operationModeSmsConfig:
         $ref: '#/definitions/OperationModeSmsConfiguration'
   ProcedureConfigReminder:
@@ -704,6 +705,7 @@ definitions:
             - sms
             - inwebo
             - email
+            - checkIdCard
       operationModeSmsConfig:
         $ref: '#/definitions/OperationModeSmsConfiguration'
   FileInput:

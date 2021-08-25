@@ -14,6 +14,8 @@ namespace Trakx.YouSign.ApiClient
 
         public string CallbackUrl { get; init; }
 
+        public bool EnabledAes { get; init; }
+
         public int? InitialRetryDelayInMilliseconds { get; init; }
 
         public int? MaxRetryCount { get; init; }

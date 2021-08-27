@@ -1502,7 +1502,6 @@ namespace Trakx.YouSign.ApiClient
     
         /// <summary>Id of creator</summary>
         [Newtonsoft.Json.JsonProperty("creator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        [System.ComponentModel.DataAnnotations.RegularExpression(@"^/users/[0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12}$")]
         public string Creator { get; set; }
     
         /// <summary>File hash</summary>
@@ -1600,7 +1599,6 @@ namespace Trakx.YouSign.ApiClient
     
         /// <summary>Id of creator of the object</summary>
         [Newtonsoft.Json.JsonProperty("creator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        [System.ComponentModel.DataAnnotations.RegularExpression(@"^/users/[0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12}$")]
         public string Creator { get; set; }
     
         /// <summary>The creator's first name</summary>

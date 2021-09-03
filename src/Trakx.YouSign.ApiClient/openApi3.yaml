@@ -571,7 +571,6 @@ definitions:
         description: '[type=signature] Name of the signature field existing in the document'
       mention:
         type: string
-        nullable: true
         description: >-
           [type=signature] Text associated above the signature image.
 
@@ -793,6 +792,7 @@ definitions:
         type: string
         nullable: true
         description: Id of creator
+        pattern: '^/users/[0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12}$'
         example: /users/9d1ede2b-5687-4440-bdc8-dd0bc64f668c
       sha256:
         type: string
@@ -903,6 +903,8 @@ definitions:
         type: string
         nullable: true
         description: Id of creator of the object
+        pattern: '^/users/[0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12}$'
+        example: /users/9d1ede2b-5687-4440-bdc8-dd0bc64f668c
       creatorFirstName:
         type: string
         description: The creator's first name
